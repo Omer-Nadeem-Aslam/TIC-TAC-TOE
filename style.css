@@ -1,0 +1,61 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(#007ff0, white);
+}
+.board{
+    width: 40vw;
+    height: 70vh;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 10px;
+    background: linear-gradient(#007ff0, white);
+}
+.btn{
+    background: linear-gradient(#007ff0, white);
+    color: white;
+    font-size: 10em;
+    text-shadow: 0px 0px 10px #007ff0, 2px 2px 3px white;
+    font-weight: 1000;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    box-shadow: 0px 0px 10px #007ff0, 2px 2px 3px black;
+    cursor: pointer;
+}
+.reset{
+    margin: 50px;
+    width: 10vw;
+    height: 5vh;
+    
+    color: rgb(0, 0, 0);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size:1.5em;
+    font-weight: 1000;
+    border-radius: 20px;
+    box-shadow: 0px 0px 20px black, 2px 2px 3px black;
+    cursor: pointer;
+    transition: all 1s;
+    overflow: hidden;
+    position: relative;
+}
+.reset::before{
+    content: 'Reset Game';
+    width: 100%;
+    height: 100%;
+    background-color: #007ff0;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    transition: all 1s;
+    color: white;
+} 
+.reset:hover::before{
+    top: 0;
+}
